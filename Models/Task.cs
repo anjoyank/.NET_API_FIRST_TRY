@@ -2,7 +2,8 @@ using System;
 
 namespace AirplaneAPI.Models
 {
-    public class Task {
+    public class Task
+    {
         public int ItemNumber { get; set; }
         public string Description { get; set; }
         public DateTime LogDate { get; set; }
