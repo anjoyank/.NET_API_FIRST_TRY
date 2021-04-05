@@ -10,6 +10,7 @@ namespace AirplaneAPI.Models
         public int LogHours { get; set; }
         public int IntervalMonths { get; set; }
         public int IntervalHours { get; set; }
+        public DateTime NextDue { get; set; }
 
     }
 }
