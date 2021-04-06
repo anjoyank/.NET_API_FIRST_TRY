@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anjoy\\.NET Development Work\\First_NET_API\\.NET_API_FIRST_TRY\\.NET_API_FIRST_TRY.csproj",
+      "projectUniqueName": "C:\\Users\\anjoy\\.NET Development Work\\First_NET_API\\AirplaneAPI\\.NET_API_FIRST_TRY.csproj",
       "projectName": ".NET_API_FIRST_TRY",
-      "projectPath": "C:\\Users\\anjoy\\.NET Development Work\\First_NET_API\\.NET_API_FIRST_TRY\\.NET_API_FIRST_TRY.csproj",
+      "projectPath": "C:\\Users\\anjoy\\.NET Development Work\\First_NET_API\\AirplaneAPI\\.NET_API_FIRST_TRY.csproj",
       "packagesPath": "C:\\Users\\anjoy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anjoy\\.NET Development Work\\First_NET_API\\.NET_API_FIRST_TRY\\obj\\",
+      "outputPath": "C:\\Users\\anjoy\\.NET Development Work\\First_NET_API\\AirplaneAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\anjoy\\AppData\\Roaming\\NuGet\\NuGet.Config"

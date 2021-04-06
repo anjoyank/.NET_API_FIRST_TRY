@@ -9,7 +9,13 @@ namespace AirplaneAPI.Controllers
     [ApiController]
     public class AircraftController : ControllerBase
     {
-        private readonly MockAircraftRepairRepo _repository = new MockAircraftRepairRepo();
+        private readonly IAircraftRepairRepo _repository;
+
+        public AircraftController(IAircraftRepairRepo repository)
+        {
+            _repository = repository;
+        }
+        //private readonly MockAircraftRepairRepo _repository = new MockAircraftRepairRepo();
         [HttpGet]
         public ActionResult <IEnumerable<Aircraft>> GetEveryAircraft()
         {

@@ -16,10 +16,10 @@ namespace AirplaneAPI.Controllers
             _repository = repository;
         }
         //private readonly MockAircraftRepairRepo _repository = new MockAircraftRepairRepo();
-        [HttpPost]
-        public ActionResult <AircraftRepair> ComputeTasksDue(int aircraftId) 
-        {
-            _repository.GetAircraftRepairById();
-        }
+        // [HttpPost]
+        // public ActionResult <AircraftRepair> ComputeTasksDue(int aircraftId) 
+        // {
+        //     _repository.GetAircraftRepairById();
+        // }
     }
 }
