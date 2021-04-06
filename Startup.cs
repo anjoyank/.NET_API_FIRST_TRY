@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AirplaneAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace _NET_API_FIRST_TRY
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddScoped<IAircraftRepairRepo, MockAircraftRepairRepo>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
