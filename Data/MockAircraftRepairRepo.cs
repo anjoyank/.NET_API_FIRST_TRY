@@ -3,32 +3,27 @@ using AirplaneAPI.Models;
 
 namespace AirplaneAPI.Data
 {
-    public class MockAircraftRepo : IAircraftRepairRepo
+    public class MockAircraftRepairRepo : IAircraftRepairRepo
     {
+        public IEnumerable<Aircraft> GetAllAircraft()
+        {
+            var aircraftAll = new List<Aircraft>
+            {
+                new Aircraft{AircraftId=1, DailyHours=0.7, CurrentHours=550},
+                new Aircraft{AircraftId=2, DailyHours=1.1, CurrentHours=200}
+            };
+            return aircraftAll;
+        }
+
+        public Aircraft GetAircraftById(int id)
+        {
+            return new Aircraft{AircraftId=1, DailyHours=0.7, CurrentHours=550};
+        }
+
         public AircraftRepair GetAircraftRepairById(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<Aircraft> GetAllAircraft()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IEnumerable<Task> GetAllTasks()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Task GetTaskById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-
-        Aircraft IAircraftRepairRepo.GetAircraftById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

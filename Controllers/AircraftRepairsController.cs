@@ -9,11 +9,17 @@ namespace AirplaneAPI.Controllers
     [ApiController]
     public class AircraftRepairsController : ControllerBase
     {
-        private readonly MockAircraftRepairRepo _repository = new MockAircraftRepairRepo();
-        [HttpPost]
-        public ActionResult <IEnumerable<Task>> ComputeTasksDue(int aircraftId) 
-        {
+        private readonly IAircraftRepairRepo _repository;
 
+        public AircraftRepairsController(IAircraftRepairRepo repository)
+        {
+            _repository = repository;
+        }
+        //private readonly MockAircraftRepairRepo _repository = new MockAircraftRepairRepo();
+        [HttpPost]
+        public ActionResult <AircraftRepair> ComputeTasksDue(int aircraftId) 
+        {
+            _repository.GetAircraftRepairById();
         }
     }
 }
