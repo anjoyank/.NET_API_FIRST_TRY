@@ -29,6 +29,13 @@ namespace AirplaneAPI.Controllers
             var aircraftItem = _repository.GetAircraftById(id);
             return Ok(aircraftItem);
         }
+
+        [HttpPost("{id}/duelist")]
+        public ActionResult <AircraftRepair> CreateTasksDue(Task[] repairs, int id) 
+        {
+            var repairList = _repository.CreateAircraftRepair(repairs, id);
+            return Ok(repairList);
+        }
     }
     
 }

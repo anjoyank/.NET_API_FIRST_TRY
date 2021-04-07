@@ -7,7 +7,7 @@ namespace AirplaneAPI.Data
     {
         //this is actually a POST operation
         //will finish this after implementing GETs
-        AircraftRepair GetAircraftRepairById(int id);
+        AircraftRepair CreateAircraftRepair(Task[] repairs, int id);
 
         //2 GET endpoints for practice
         IEnumerable<Aircraft> GetAllAircraft();

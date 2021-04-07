@@ -20,7 +20,7 @@ namespace AirplaneAPI.Data
             return new Aircraft{AircraftId=1, DailyHours=0.7, CurrentHours=550};
         }
 
-        public AircraftRepair GetAircraftRepairById(int id)
+        public AircraftRepair CreateAircraftRepair(Task[] repairs, int id)
         {
             throw new System.NotImplementedException();
         }
