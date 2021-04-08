@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AirplaneAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using AirplaneAPI.Models;
 
 namespace _NET_API_FIRST_TRY
 {
@@ -28,7 +29,7 @@ namespace _NET_API_FIRST_TRY
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddScoped<IAircraftRepairRepo, MockAircraftRepairRepo>();
+            services.AddDbContext<MyContext>(opt => opt.UseInMemoryDatabase("AircraftRepairDb"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
